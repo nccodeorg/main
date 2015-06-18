@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-This is a test
-</body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <div class="logo">
+    <svg version="1.1" id="bird" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 1200" enable- xml:space="preserve">
+    <path class="beak" d="M1000,196L894,400c0-0.1-0.1-0.3-0.1-0.3L874,196L1100,196L1100,196z" />
+    <path class="head" d="M547,196h327L711,359L747,296z" />
+    <path class="face" d="M994,400L673,520L711,359l162.9-162h0.4c55,55,97,125.7,119.7,203.6 C994,399,994,400,994,400z" />
+    <polygon class="tail" points="337.2,911.6 0,573.4 0,911.6 " />
+
+    <path class="body" d="M1012,530c0,261-212,474-474,474c-130.4,0-248-52-334-138l507-507L873,420l120-020 C1006,441,1012,485,1012,530z" />
+    <path class="wing" d="M253,866c58,57,138,63,226,63c177,0,321-143,321-321c0-88-35-168-93-226 L253,866z" />
+
+    <circle class="eyeball" cx="874" cy="285" r="26" />
+    <circle class="pupil" cx="880" cy="270" r="7" />
+  </svg>
+    <div class="text">
+      NCCode
+    </div>
+  </div>
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe<a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

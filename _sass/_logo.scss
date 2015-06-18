@@ -1,0 +1,29 @@
+.logo {
+  margin: auto;
+  max-width: 300px;
+  width: 100%;
+
+  .beak {
+    fill: #F4B13B;
+  }
+
+  .head,
+  .tail,
+  .body {
+    fill: #B53026;
+  }
+
+  .wing {
+    fill: #F13737;
+  }
+
+  .eyeball {
+    fill: #FFFFFF;
+  }
+  .tail {
+    display: none;
+  }
+  .text {
+    font-size: 90px;
+  }
+}
